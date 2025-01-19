@@ -16,7 +16,6 @@ function adicionarAmigo(){
         listaNome.push(nome);
         criarListaDeParticipantes();
         limparCampo();
-        console.log(listaNome);
     }
 }
 
@@ -48,5 +47,4 @@ function sortearNovamente(){
     resultado.innerHTML = '';
     listaNome = [];
     document.getElementById('reiniciar').setAttribute('disabled', true);
-    
 }
