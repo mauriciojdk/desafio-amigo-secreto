@@ -35,11 +35,18 @@ function limparCampo() {
 }
 
 function sortearAmigo() {
-    participantes.innerHTML = '';
-    resultado.innerHTML = 'O amigo secreto sorteado é: ' + listaNome[parseInt(posicaoAleatoria * listaNome.length)];
+    if(listaNome == ''){
+        alert('Digite nomes a lista para sortear');
+    } else {
+        participantes.innerHTML = '';
+        resultado.innerHTML = 'O amigo secreto sorteado é: ' + listaNome[parseInt(posicaoAleatoria * listaNome.length)];
+    }
+    document.getElementById('reiniciar').removeAttribute('disabled');
 }
 
 function sortearNovamente(){
     resultado.innerHTML = '';
     listaNome = [];
+    document.getElementById('reiniciar').setAttribute('disabled', true);
+    
 }
